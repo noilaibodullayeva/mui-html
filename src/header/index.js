@@ -145,9 +145,7 @@ function ResponsiveAppBar() {
                                 {page}
                             </Typography>
                         ))}
-                    </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
-                        <IconButton>
+                    </Box><IconButton>
                             <SearchOffRounded
                                 size="large"
                                 aria-label="account of current user"
@@ -155,6 +153,34 @@ function ResponsiveAppBar() {
                                 onClick={handleOpenNavMenu}
                             />
                         </IconButton>
+                        <TextField
+                                id="standard-basic"
+                                label="search here..."
+                                variant="standard"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'right',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{
+                                    height: '100 %',
+                                    width: '100 %',
+                                    fontSize: '1.6rem',
+                                    color: '#222',
+                                    padding: '1rem',
+                                    textTransform: 'none',
+                                    display: { xs: 'block', md: 'none' },
+                                    top: 0
+                                }} />
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
+                        
 
                         <Box sx={{
                             position: 'absolute',
@@ -193,6 +219,7 @@ function ResponsiveAppBar() {
                                     padding: '1rem',
                                     textTransform: 'none',
                                     display: { xs: 'block', md: 'none' },
+                                    top: 40
                                 }} />
                         </Box>
 
