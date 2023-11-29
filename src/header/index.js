@@ -7,14 +7,9 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Img1 from '../img/logoo.png'
-import { Input, InputAdornment, TextField } from '@mui/material';
-import { Search, SearchOffRounded } from '@mui/icons-material';
+import {TextField} from '@mui/material';
+import {  SearchOffRounded } from '@mui/icons-material';
 
 const pages = ['Home', 'Menu', 'About', 'Products', 'Review', 'Contact', 'Blogs'];
 
@@ -38,7 +33,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" sx={{backgroundColor:'#010103'}}>
+        <AppBar position="static" sx={{ backgroundColor: '#010103' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -85,9 +80,9 @@ function ResponsiveAppBar() {
                             onClose={handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
-                                width:'200px',
-                                left:'-20px',
-                                top:'5px'
+                                width: '200px',
+                                left: '-20px',
+                                top: '5px'
                             }}
                         >
                             {pages.map((page) => (
@@ -97,8 +92,8 @@ function ResponsiveAppBar() {
                                         "&:hover": {
                                             borderBottom: '1px solid #d3ad7f',
                                         },
-                                        textAlign:"center",
-                                        width:'300px',
+                                        textAlign: "center",
+                                        width: '300px',
                                     }} >{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -117,8 +112,8 @@ function ResponsiveAppBar() {
                             color: 'inherit',
                             textDecoration: 'none',
                             fontSize: '25px',
-                            textAlign:'center',
-                            marginRight:'40%'
+                            textAlign: 'center',
+                            marginRight: '40%'
                         }}
                     >
                         Coffee
@@ -151,13 +146,16 @@ function ResponsiveAppBar() {
                             </Typography>
                         ))}
                     </Box>
-                    <Box>
-                        <SearchOffRounded
-                            size="large"
-                            aria-label="account of current user"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                        />
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
+                        <IconButton>
+                            <SearchOffRounded
+                                size="large"
+                                aria-label="account of current user"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                            />
+                        </IconButton>
+
                         <Box sx={{
                             position: 'absolute',
                             top: '15%',
@@ -171,11 +169,22 @@ function ResponsiveAppBar() {
                             transformOrigin: 'top',
                         }}>
 
-                            <TextField id="standard-basic" label="search here..." variant="standard" startAdornment={
-                                <InputAdornment position="end">
-                                    <SearchOffRounded />
-                                </InputAdornment>
-                            }
+                            <TextField
+                                id="standard-basic"
+                                label="search here..."
+                                variant="standard"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'right',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
                                 sx={{
                                     height: '100 %',
                                     width: '100 %',
@@ -183,8 +192,8 @@ function ResponsiveAppBar() {
                                     color: '#222',
                                     padding: '1rem',
                                     textTransform: 'none',
-                                }}
-                                onClose={handleCloseNavMenu} />
+                                    display: { xs: 'block', md: 'none' },
+                                }} />
                         </Box>
 
                     </Box>
