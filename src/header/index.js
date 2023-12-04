@@ -8,8 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import {TextField} from '@mui/material';
-import {  SearchOffRounded } from '@mui/icons-material';
+import { TextField } from '@mui/material';
+import { SearchOffRounded } from '@mui/icons-material';
 
 const pages = ['Home', 'Menu', 'About', 'Products', 'Review', 'Contact', 'Blogs'];
 
@@ -94,6 +94,7 @@ function ResponsiveAppBar() {
                                         },
                                         textAlign: "center",
                                         width: '300px',
+                                        transition: '.2s linear',
                                     }} >{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -139,56 +140,31 @@ function ResponsiveAppBar() {
                                         borderBottom: '.1rem solid #d3ad7f',
                                         color: '#d3ad7f',
                                     },
-
+                                    transition: '.2s linear'
                                 }}
                             >
                                 {page}
                             </Typography>
                         ))}
-                    </Box><IconButton>
-                            <SearchOffRounded
-                                size="large"
-                                aria-label="account of current user"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                            />
-                        </IconButton>
-                        <TextField
-                                id="standard-basic"
-                                label="search here..."
-                                variant="standard"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'right',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    height: '100 %',
-                                    width: '100 %',
-                                    fontSize: '1.6rem',
-                                    color: '#222',
-                                    padding: '1rem',
-                                    textTransform: 'none',
-                                    display: { xs: 'block', md: 'none' },
-                                    top: 0
-                                }} />
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
-                        
+                    </Box>
+                    <IconButton>
+                        <SearchOffRounded
+                            size="large"
+                            aria-label="account of current user"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            display='block'
+                            color='#fff'
+                        />
+                    </IconButton>
 
                         <Box sx={{
                             position: 'absolute',
                             top: '15%',
                             right: '7%',
                             background: '#fff',
-                            width: '50rem',
-                            height: '5rem',
+                            // width: '10rem',
+                            // height: '5rem',
                             display: 'flex',
                             alignItems: 'center',
                             transform: 'scaleY(0)',
@@ -212,18 +188,16 @@ function ResponsiveAppBar() {
                                 open={Boolean(anchorElNav)}
                                 onClose={handleCloseNavMenu}
                                 sx={{
-                                    height: '100 %',
-                                    width: '100 %',
+                                    height: '100%',
+                                    width: '100%',
                                     fontSize: '1.6rem',
                                     color: '#222',
                                     padding: '1rem',
                                     textTransform: 'none',
-                                    display: { xs: 'block', md: 'none' },
-                                    top: 40
+                                    top: 40,
+                                    backgroundColor: '#fff'
                                 }} />
                         </Box>
-
-                    </Box>
                 </Toolbar>
             </Container>
         </AppBar>
