@@ -5,6 +5,8 @@ import About from './about';
 import Menu from './menu';
 import Products from './products';
 import Contact from './contact';
+import Blogs from './blogs';
+import Footer from './footer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Menu/>
       <Products/>
       <Contact/>
+      <Blogs/>
+      <Footer/>
     </div>
   );
 }

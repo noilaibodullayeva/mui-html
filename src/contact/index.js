@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, Input, InputAdornment, InputLabel, Typography } from "@mui/material";
+import { Box, Button, Input, InputAdornment,  Typography } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import { Call, Mail } from "@mui/icons-material";
 
@@ -18,10 +18,7 @@ function Contact() {
                     width:'50%',
                     height:'400px'
                 }}>
-                    <iframe sx={{
-                    width: '100%',
-                    objectFit: 'cover'
-                }}
+                    <iframe sx={styles.map}
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24212.444212568993!2d68.1509339130868!3d40.661727169643996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ad9dbe15778cf1%3A0xe89089a6a2f1cdc3!2sGagarin%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1699634404120!5m2!1sen!2s"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></Box>
                 <Box>
@@ -32,6 +29,8 @@ function Contact() {
                         gap: '10px',
                         justifyContent:'center',
                         textAlign:'center',
+                        margin: {md:0, xs:'15px'},
+                        width:'100%'
                     }}>
                         <Input
                             sx={styles.input}
@@ -82,7 +81,7 @@ const styles = {
         color: ' #fff',
         textTransform: 'uppercase',
         paddingBottom: ' 3rem',
-        paddingTop: { md: '5rem', xs: '30rem' },
+        paddingTop: { md: '5rem', xs: '10rem' },
         fontSize: '3rem',
         display: 'flex',
         justifyContent: 'center',
@@ -103,13 +102,15 @@ const styles = {
         fontSize: '1.8rem',
         padding: ' .7rem 0',
         fontWeight: 'bold',
-        marginTop:'1rem'
+        marginTop:'1rem',
+        marginLeft: {md:0, xs:'15px'}
     },
     input: {
-        width: '600px',
+        width: {md:'600px', xs:'450px'},
         border: '.1rem solid rgba(255, 255, 255, .3)',
         height: '55px',
-        color:'#fff'
+        color:'#fff',
+        background:'transparent'
     },
     button: {
         marginTop: '.5rem',

@@ -6,7 +6,6 @@ import Img6 from '../../src/img/menu5.jpg'
 import Img7 from '../../src/img/menu6.jpg'
 import Img8 from '../../src/img/menu7.jpg'
 import Img9 from '../../src/img/menu8.jpg'
-import { Toys } from "@mui/icons-material";
 
 function Menu() {
     return (
@@ -122,7 +121,7 @@ const styles = {
     img: {
         width: '250px',
         height: '250px',
-        borderRadius: '50%',
+        borderRadius: '100px',
     },
     h3: {
         color: '#fff',
