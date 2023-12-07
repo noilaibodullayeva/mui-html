@@ -11,64 +11,59 @@ function Menu() {
     return (
         <Box>
             <Typography sx={styles.TypoMenu1}>
-                About <Typography sx={styles.TypoMenu2}>US</Typography>
+                Our <Typography sx={styles.TypoMenu2}>Menu</Typography>
             </Typography>
             <Box sx={styles.boxContainer}>
                 <Box sx={styles.box1}>
-                    <img src={Img3} alt="" sx={{
-                        width: '250px',
-                        height: '250px',
-                        borderRadius: '50%',
-                        overflow: 'hidden'
-                    }} />
+                    <img src={Img3} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99  <Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img4} alt="" sx={styles.img} />
+                    <img src={Img4} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img5} alt="" sx={styles.img} />
+                    <img src={Img5} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img6} alt="" sx={styles.img} />
+                    <img src={Img6} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img7} alt="" sx={styles.img} />
+                    <img src={Img7} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img8} alt="" sx={styles.img} />
+                    <img src={Img8} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img9} alt="" sx={styles.img} />
+                    <img src={Img9} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img3} alt="" sx={styles.img} />
+                    <img src={Img3} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
                 </Box>
                 <Box sx={styles.box1}>
-                    <img src={Img5} alt="" sx={styles.img} />
+                    <img src={Img5} alt="" style={styles.img} />
                     <Typography sx={styles.h3}>Tasty And Healthy</Typography>
                     <Typography sx={styles.price}>$15.99<Typography sx={styles.span}>$20.00</Typography></Typography>
                     <Button variant='standart' sx={styles.button}>Add to a card</Button>
@@ -86,7 +81,7 @@ const styles = {
         color: ' #fff',
         textTransform: 'uppercase',
         paddingBottom: ' 3rem',
-        paddingTop: {md:'5rem', xs:'30rem'},
+        paddingTop: {md:'5rem', xs:'3rem'},
         fontSize: '3rem',
         display: 'flex',
         justifyContent: 'center',
@@ -106,7 +101,7 @@ const styles = {
         margin:{md:'3rem 6rem', xs:'.5rem'}
     },
     box1: {
-        padding: '5rem',
+        padding: '3rem',
         textAlign: 'center',
         border: '.1rem solid rgba(255, 255, 255, .3)',
         background: 'transparent',
@@ -121,7 +116,7 @@ const styles = {
     img: {
         width: '250px',
         height: '250px',
-        borderRadius: '100px',
+        borderRadius: '50%',
     },
     h3: {
         color: '#fff',

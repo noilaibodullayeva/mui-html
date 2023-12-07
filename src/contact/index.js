@@ -15,10 +15,10 @@ function Contact() {
                 gap: '1rem',
             }}>
                 <Box sx={{
-                    width:'50%',
+                    width:{md:'50%', xs:'100%'},
                     height:'400px'
                 }}>
-                    <iframe sx={styles.map}
+                    <iframe style={styles.map}
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24212.444212568993!2d68.1509339130868!3d40.661727169643996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ad9dbe15778cf1%3A0xe89089a6a2f1cdc3!2sGagarin%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1699634404120!5m2!1sen!2s"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></Box>
                 <Box>
@@ -29,7 +29,7 @@ function Contact() {
                         gap: '10px',
                         justifyContent:'center',
                         textAlign:'center',
-                        margin: {md:0, xs:'15px'},
+                        margin: {md:0, xs:'20px'},
                         width:'100%'
                     }}>
                         <Input
@@ -94,8 +94,8 @@ const styles = {
         fontWeight: 'bolder'
     },
     map: {
-        width: '500px',
-        height: '350px'
+        width: '100%',
+        height: '100%'
     },
     h3: {
         color: '#fff',
@@ -116,15 +116,17 @@ const styles = {
         marginTop: '.5rem',
         display: 'inline-block',
         padding: '.8rem 2rem',
-        fontSize: { md: '.8rem', xs: '.5rem' },
+        fontSize: { md: '.8rem', xs: '.7rem' },
         color: '#fff',
         background: '#d3ad7f',
         cursor: 'pointer',
         "&:hover": {
             letterSpacing: '.2rem',
             background: '#d3ad7f',
+            width:'300px'
         },
         fontWeight: 'bold',
-        width:'250px'
+        width:'250px',
+        transition: 'width 7s',
     }
 }

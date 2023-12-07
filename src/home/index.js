@@ -49,15 +49,17 @@ const styles = {
     TypoHome3: {
         marginTop: '1rem',
         display: 'inline-block',
-        padding: '.9rem 3rem',
+        padding: '.4rem 1.5rem',
         fontSize: {md:'1rem', xs:'.7rem'},
         color: '#fff',
         background: '#d3ad7f',
         cursor: 'pointer',
         "&:hover": {
-            letterSpacing: '.2rem',
+            width:'220px',
             background: '#d3ad7f',
+            letterSpacing:'1.2'
         },
-        fontWeight:'bold'
+        fontWeight:'bold',
+        transition: 'width 7s',
     }
 }

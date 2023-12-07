@@ -95,6 +95,7 @@ function ResponsiveAppBar() {
                                         textAlign: "center",
                                         width: '300px',
                                         transition: '.2s linear',
+                                        borderBottom: '1px solid #d3ad7f'
                                     }} >{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -137,10 +138,11 @@ function ResponsiveAppBar() {
                                     display: 'block',
                                     gap: '5px',
                                     "&:hover": {
-                                        borderBottom: '.1rem solid #d3ad7f',
+                                        borderBottom: '1px solid #d3ad7f',
                                         color: '#d3ad7f',
                                     },
-                                    transition: '.2s linear'
+                                    transition: '[{.2s linear}]',
+                                    borderBottom: '1px solid transparent'
                                 }}
                             >
                                 {page}
@@ -206,10 +208,3 @@ function ResponsiveAppBar() {
 export default ResponsiveAppBar;
 
 
-const styles = {
-    img: {
-        width: '70px',
-        height: '70px',
-        borderRadius: '50%'
-    }
-}

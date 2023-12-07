@@ -28,7 +28,7 @@ const styles = {
         color: ' #fff',
         textTransform: 'uppercase',
         paddingBottom: ' 3rem',
-        paddingTop: {md:'5rem', xs:'30rem'},
+        paddingTop: {md:'3rem', xs:'5rem'},
         fontSize: '3rem',
         display: 'flex',
         justifyContent: 'center',
@@ -46,9 +46,9 @@ const styles = {
         background: '#13131a',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        width: '80%',
-        height:'450px',
-        margin:'1px 10%'
+        width: {md:'80%', xs:'100%'},
+        height:{md:'450px', xs:'700px'},
+        margin:{md:'1px 10%', xs:'1%'}
     },
     Box1: {
         backgroundImage: `url(${Img2})`,
@@ -69,7 +69,7 @@ const styles = {
         color: '#fff',
     },
     TypoAbout4: {
-        fontSize: '1.3rem',
+        fontSize: {md:'1.3rem', xs:'0.9rem'},
         color: '#ccc',
         padding: '.5rem 0',
         lineHeight: '1.8',
@@ -77,7 +77,7 @@ const styles = {
     TypoHome3: {
         marginTop: '1rem',
         display: 'inline-block',
-        padding: '.9rem 3rem',
+        padding: '.5rem 2rem',
         fontSize: { md: '1rem', xs: '.7rem' },
         color: '#fff',
         background: '#d3ad7f',
@@ -85,7 +85,9 @@ const styles = {
         "&:hover": {
             letterSpacing: '.2rem',
             background: '#d3ad7f',
+            width:'320px'
         },
         fontWeight: 'bold',
+        transition: 'width 7s',
     }
 }

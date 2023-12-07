@@ -12,7 +12,7 @@ function Blogs() {
             <Box sx={styles.boxBig}>
                 <Box sx={styles.boxInside}>
                     <Box sx={styles.img1Box}>
-                        <img sx={styles.img1} src={Img12} alt="" />
+                        <img style={styles.img1} src={Img12} alt="" />
                     </Box>
                     <Box sx={styles.content}>
                         <Typography href="#" class="title" sx={styles.tasty}>tasty and refreshing coffee</Typography>
@@ -24,7 +24,7 @@ function Blogs() {
                 </Box>
                 <Box sx={styles.boxInside}>
                 <Box sx={styles.img1Box}>
-                        <img sx={styles.img1} src={Img13} alt="" />
+                        <img style={styles.img1} src={Img13} alt="" />
                     </Box>
                     <Box sx={styles.content}>
                         <Typography href="#" class="title" sx={styles.tasty}>tasty and refreshing coffee</Typography>
@@ -35,7 +35,7 @@ function Blogs() {
                 </Box>
                 <Box sx={styles.boxInside}>
                 <Box sx={styles.img1Box}>
-                        <img sx={styles.img1} src={Img14} alt="" />
+                        <img style={styles.img1} src={Img14} alt="" />
                     </Box>
                     <Box sx={styles.content}>
                         <Typography  sx={styles.tasty}>tasty and refreshing coffee</Typography>
@@ -85,8 +85,11 @@ const styles = {
 
     },
     img1: {
-        transform: 'scale(1.2)',
-        width:'400px'
+        width:'100%',
+        height:'100%',
+        "&:hover": {
+            transform: '[{scale(2)}]'
+        },
     },
     content: { padding: '2rem', },
     tasty:{
