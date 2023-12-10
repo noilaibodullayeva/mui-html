@@ -140,6 +140,7 @@ function ResponsiveAppBar() {
                                     "&:hover": {
                                         borderBottom: '1px solid #d3ad7f',
                                         color: '#d3ad7f',
+                                        cursor:'pointer'
                                     },
                                     transition: '[{.2s linear}]',
                                     borderBottom: '1px solid transparent'

@@ -1,7 +1,12 @@
 import { Box, Typography, Button } from '@mui/material';
-import Img2 from "../../src/img/aboutbg.jpg"
+import Img2 from "../../src/img/aboutbg.jpg";
+import "../../src/home.css";
+import { useState } from "react";
 
 function About() {
+
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <Box>
             <Typography sx={styles.TypoAbout1}>
@@ -13,7 +18,11 @@ function About() {
                     <Typography sx={styles.TypoAbout3} >What Makes Our Coffee Special?</Typography>
                     <Typography sx={styles.TypoAbout4} >Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Rem Deleniti Ex Eum Excepturi Illum Rerum In Molestias, Ad Dolorum Sequi Similique Iusto Consequuntur Assumenda. Architecto Sit Cumque Molestias Obcaecati Excepturi.</Typography>
                     <Typography sx={styles.TypoAbout4} >Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Veniam, Hic Rem Quo Minus Ducimus Modi Quos Ad Eligendi Repellat Libero.</Typography>
-                    <Button variant='standart' sx={styles.TypoHome3}>Get yours now</Button>
+                    <Button 
+                     className={`animated-button ${isHovered ? 'hovered' : ''}`}
+                     onMouseEnter={() => setIsHovered(true)}
+                     onMouseLeave={() => setIsHovered(false)}  
+                    variant='standart' sx={styles.TypoHome3}>Get yours now</Button>
                 </Box>
             </Box>
         </Box>
@@ -85,9 +94,7 @@ const styles = {
         "&:hover": {
             letterSpacing: '.2rem',
             background: '#d3ad7f',
-            width:'320px'
         },
         fontWeight: 'bold',
-        transition: 'width 7s',
     }
 }

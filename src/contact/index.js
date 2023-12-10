@@ -1,8 +1,13 @@
 import { Box, Button, Input, InputAdornment,  Typography } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import { Call, Mail } from "@mui/icons-material";
+import "../../src/home.css"
+import { useState } from "react";
 
 function Contact() {
+
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <Box>
             <Typography sx={styles.TypoProducts1}>
@@ -65,7 +70,11 @@ function Contact() {
                                 </InputAdornment>
                             }
                         />
-                        <Button variant='standart' sx={styles.button}>Contact mee</Button>
+                        <Button variant='standart' 
+                         className={`animated-button ${isHovered ? 'hovered' : ''}`}
+                         onMouseEnter={() => setIsHovered(true)}
+                         onMouseLeave={() => setIsHovered(false)}  
+                          sx={styles.button}>Contact mee</Button>
                     </Box>
                 </Box>
             </Box>
@@ -123,10 +132,8 @@ const styles = {
         "&:hover": {
             letterSpacing: '.2rem',
             background: '#d3ad7f',
-            width:'300px'
         },
         fontWeight: 'bold',
         width:'250px',
-        transition: 'width 7s',
     }
 }

@@ -1,14 +1,20 @@
 import Img1 from "../../src/img/bgg.jpg"
 import { Box, Typography, Button } from '@mui/material';
+import "../../src/home.css"
+import { useState } from "react";
 
 function Home() {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <Box >
             <Box sx={styles.HomeBox}>
                 <Box sx={styles.words}>
                     <Typography sx={styles.TypoHome1}>FRESH COFFE IN THE MORNING</Typography>
                     <Typography sx={styles.TypoHome2}>Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Quidem Accusamus Voluptatibus Officia Nesciunt Totam Perspiciatis?</Typography>
-                    <Button variant='standart' sx={styles.TypoHome3}>Get yours now</Button>
+                    <Button variant='standart' 
+                     className={`animated-button ${isHovered ? 'hovered' : ''}`}
+                     onMouseEnter={() => setIsHovered(true)}
+                     onMouseLeave={() => setIsHovered(false)}  sx={styles.TypoHome3}>Get yours now</Button>
                 </Box>
             </Box>
 
