@@ -61,9 +61,9 @@ const styles = {
         background: '#d3ad7f',
         cursor: 'pointer',
         "&:hover": {
-            width:'220px',
+            // width:'220px',
             background: '#d3ad7f',
-            letterSpacing:'1.2'
+            // letterSpacing:'1.2'
         },
         fontWeight:'bold',
         transition: 'width 7s',
