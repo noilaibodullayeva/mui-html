@@ -130,10 +130,9 @@ const styles = {
         background: '#d3ad7f',
         cursor: 'pointer',
         "&:hover": {
-            letterSpacing: '.2rem',
             background: '#d3ad7f',
         },
         fontWeight: 'bold',
-        width:'250px',
+        width:'200px'
     }
 }
