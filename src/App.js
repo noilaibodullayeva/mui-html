@@ -12,13 +12,13 @@ function App() {
   return (
     <div>
       <ResponsiveAppBar />
-      <Home/>
-      <About/>
-      <Menu/>
-      <Products/>
-      <Contact/>
-      <Blogs/>
-      <Footer/>
+      <Home />
+      <About />
+      <Menu />
+      <Products />
+      <Contact />
+      <Blogs />
+      <Footer />
     </div>
   );
 }

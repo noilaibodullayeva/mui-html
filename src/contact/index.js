@@ -1,4 +1,4 @@
-import { Box, Button, Input, InputAdornment,  Typography } from "@mui/material";
+import { Box, Button, Input, InputAdornment, Typography } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import { Call, Mail } from "@mui/icons-material";
 import "../../src/home.css"
@@ -20,22 +20,22 @@ function Contact() {
                 gap: '1rem',
             }}>
                 <Box sx={{
-                    width:{md:'50%', xs:'100%'},
-                    height:'400px'
+                    width: { md: '50%', xs: '100%' },
+                    height: '400px'
                 }}>
                     <iframe style={styles.map}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24212.444212568993!2d68.1509339130868!3d40.661727169643996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ad9dbe15778cf1%3A0xe89089a6a2f1cdc3!2sGagarin%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1699634404120!5m2!1sen!2s"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></Box>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24212.444212568993!2d68.1509339130868!3d40.661727169643996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ad9dbe15778cf1%3A0xe89089a6a2f1cdc3!2sGagarin%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1699634404120!5m2!1sen!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></Box>
                 <Box>
                     <Typography sx={styles.h3}>GET IN TOUCH</Typography>
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '10px',
-                        justifyContent:'center',
-                        textAlign:'center',
-                        margin: {md:0, xs:'20px'},
-                        width:'100%'
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        margin: { md: 0, xs: '20px' },
+                        width: '100%'
                     }}>
                         <Input
                             sx={styles.input}
@@ -44,7 +44,7 @@ function Contact() {
                             id="input-with-icon-adornment"
                             startAdornment={
                                 <InputAdornment position="start">
-                                    <PersonIcon sx={{ color: '#fff', pl:'5px', fontSize:'2rem' }} />
+                                    <PersonIcon sx={{ color: '#fff', pl: '5px', fontSize: '2rem' }} />
                                 </InputAdornment>
                             }
                         />
@@ -55,7 +55,7 @@ function Contact() {
                             id="input-with-icon-adornment"
                             startAdornment={
                                 <InputAdornment position="start">
-                                    <Mail sx={{ color: '#fff', pl:'5px', fontSize:'2rem' }} />
+                                    <Mail sx={{ color: '#fff', pl: '5px', fontSize: '2rem' }} />
                                 </InputAdornment>
                             }
                         />
@@ -66,15 +66,15 @@ function Contact() {
                             id="input-with-icon-adornment"
                             startAdornment={
                                 <InputAdornment position="start">
-                                    <Call sx={{ color: '#fff', pl:'5px', fontSize:'2rem' }} />
+                                    <Call sx={{ color: '#fff', pl: '5px', fontSize: '2rem' }} />
                                 </InputAdornment>
                             }
                         />
-                        <Button variant='standart' 
-                         className={`animated-button ${isHovered ? 'hovered' : ''}`}
-                         onMouseEnter={() => setIsHovered(true)}
-                         onMouseLeave={() => setIsHovered(false)}  
-                          sx={styles.button}>Contact mee</Button>
+                        <Button variant='standart'
+                            className={`animated-button ${isHovered ? 'hovered' : ''}`}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                            sx={styles.button}>Contact mee</Button>
                     </Box>
                 </Box>
             </Box>
@@ -111,15 +111,15 @@ const styles = {
         fontSize: '1.8rem',
         padding: ' .7rem 0',
         fontWeight: 'bold',
-        marginTop:'1rem',
-        marginLeft: {md:0, xs:'15px'}
+        marginTop: '1rem',
+        marginLeft: { md: 0, xs: '15px' }
     },
     input: {
-        width: {md:'600px', xs:'450px'},
+        width: { md: '600px', xs: '450px' },
         border: '.1rem solid rgba(255, 255, 255, .3)',
         height: '55px',
-        color:'#fff',
-        background:'transparent'
+        color: '#fff',
+        background: 'transparent'
     },
     button: {
         marginTop: '.5rem',
@@ -133,6 +133,6 @@ const styles = {
             background: '#d3ad7f',
         },
         fontWeight: 'bold',
-        width:'200px'
+        width: '200px'
     }
 }
